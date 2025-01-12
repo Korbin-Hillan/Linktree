@@ -1,0 +1,71 @@
+/* General body styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Particle effects container */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        #232741 0%,
+        #3b2c5a 25%,
+        #541388 50%,
+        #A624F9 75%,
+        #141621 100%
+    );
+    background-size: 400% 400%;
+
+    animation: gradientShift 10s ease infinite;
+    z-index: 0; /* Keep particles in the background */
+}
+
+@keyframes gradientShift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+
+}
+
+/* Content wrapper with Flexbox */
+.content-wrapper {
+    position: relative;
+    z-index: 1; /* Keep content above particles */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    pointer-events: none;
+}
+.content-wrapper * {
+    pointer-events: auto;
+  }
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 8% 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a:hover {
+    text-decoration: underline;
+}
