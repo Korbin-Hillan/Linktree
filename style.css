@@ -81,7 +81,7 @@ a:hover {
     object-position: center bottom;
 }
 
-@media (max-height: 500px) {
+@media (max-height: 800px) {
     .content-wrapper {
         height: 80vh;
     }
