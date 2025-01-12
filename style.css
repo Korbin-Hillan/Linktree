@@ -83,12 +83,6 @@ a:hover {
     object-position: center bottom;
 }
 
-@media (max-height: 800px) {
-    .content-wrapper {
-        height: 80vh;
-    }
-}
-
 #links {
     max-width: 675px;
     width: auto;
@@ -122,4 +116,28 @@ li a {
 
 li:hover a {
     color: #D92FD9;
+}
+
+@media (max-height: 800px) {
+    .content-wrapper {
+        height: 80vh;
+    }
+    a {
+        font-size: 1rem;
+    }
+    li {
+        width: 90%; /* Smaller button width for narrow screens */
+        padding: 10px;
+    }
+    li a {
+        font-size: 1rem; /* Smaller text for links */
+        padding: 8px;
+    }
+    #picture {
+        max-width: 150px; /* Reduce image size */
+    }
+
+    #links {
+        max-width: 90%; /* Adjust container width for phones */
+    }
 }
