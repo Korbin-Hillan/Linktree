@@ -1,149 +1,217 @@
 /* General body styles */
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;;
-    font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
-    overflow-y: auto; /* Enable vertical scrolling */
-
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 /* Particle effects container */
 #particles-js {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;    
-    height: 100%;
-    background: linear-gradient(
-        135deg,
-        #232741 0%,
-        #3b2c5a 25%,
-        #541388 50%,
-        #A624F9 75%,
-        #141621 100%
-    );
-    background-size: 400% 400%;
-    overflow: hidden;
-    animation: gradientShift 10s ease infinite;
-    z-index: 0; /* Keep particles in the background */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    #232741 0%,
+    #3b2c5a 25%,
+    #541388 50%,
+    #a624f9 75%,
+    #141621 100%
+  );
+  background-size: 400% 400%;
+  overflow: hidden;
+  animation: gradientShift 10s ease infinite;
+  z-index: 0; /* Keep particles in the background */
 }
 
 @keyframes gradientShift {
-    0%   { background-position: 0% 50%; }
-    50%  { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Content wrapper with Flexbox */
 .content-wrapper {
-    position: relative;
-    z-index: 1; /* Keep content above particles */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Let content define the height */
-    width: 100%;
-    color: #fff;
-    text-align: center;
-    pointer-events: none;
-
+  position: relative;
+  z-index: 1; /* Keep content above particles */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Let content define the height */
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  pointer-events: none;
 }
 
 .content-wrapper * {
-    pointer-events: auto;
-  }
+  pointer-events: auto;
+}
 
 a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5rem;
-    margin: 8% 0;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin: 8% 0;
 }
 
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 #picture {
-    max-width: 200px;
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    margin: 0 auto;
-    display: block;
-    object-fit: cover;
-    object-position: center bottom;
+  max-width: 200px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  object-fit: cover;
+  object-position: center bottom;
 }
 
 #links {
-    max-width: 675px;
-    width: auto;
-    display: block;
-    margin: 27px auto;
+  max-width: 675px;
+  width: auto;
+  display: block;
+  margin: 27px auto;
 }
 
 li {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40vw;
-    max-width: 600px;
-    max-height: 40px;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #fff;
-    top: -20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  max-width: 600px;
+  max-height: 40px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #fff;
+  top: -20px;
 }
 li:hover {
-    -webkit-tap-highlight-color: transparent;
-    background-color: #FFFFFF;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #ffffff;
 }
 li a {
-    display: block;
-    width: 100%; /* Fill the <li> */
-    text-align: center;
-    padding: 10px; /* Control button height */
-    text-decoration: none;
+  display: block;
+  width: 100%; /* Fill the <li> */
+  text-align: center;
+  padding: 10px; /* Control button height */
+  text-decoration: none;
 }
 
 li:hover a {
-    color: #D92FD9;
+  color: #d92fd9;
 }
 /* Mobile-specific styles */
 @media (max-width: 768px) {
-    
-    .content-wrapper {
-        top: 20px;
-    }
-    
-    a {
-        font-size: 1rem; /* Reduce font size for links */
-    }
+  .content-wrapper {
+    top: 20px;
+  }
 
-    li {
-        width: 80vw; /* Smaller button width for narrow screens */
-        height: 2.5vh;
-        padding: 10px;
-    }
+  a {
+    font-size: 1rem; /* Reduce font size for links */
+  }
 
-    li a {
-        font-size: 1rem; /* Smaller text for links */
-        padding: 8px;
-    }
+  li {
+    width: 80vw; /* Smaller button width for narrow screens */
+    height: 2.5vh;
+    padding: 10px;
+  }
 
-    #picture {
-        max-width: 150px; /* Reduce image size */
-    }
+  li a {
+    font-size: 1rem; /* Smaller text for links */
+    padding: 8px;
+  }
 
-    #links {
-        max-width: 90%; /* Adjust container width for phones */
-    }
+  #picture {
+    max-width: 150px; /* Reduce image size */
+  }
+
+  #links {
+    max-width: 90%; /* Adjust container width for phones */
+  }
+}
+
+.modal {
+  display: none; /* Flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: fixed; /* Cover the entire screen */
+  z-index: 1000; /* Ensure it's on top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full viewport width */
+  height: 100%; /* Full viewport height */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+}
+
+.modal-content {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  text-align: center; 
+}
+.close-button-container {
+  display: flex;
+  justify-content: flex-end; /* Align close button to the right */
+  width: 100%; /* Full width of the modal-content */
+}
+
+.close-button {
+  cursor: pointer;
+  font-size: 1.5em; /* Control size */
+  color: black; /* Set button color */
+  background: none; /* No background */
+  border: none; /* No border */
+  padding: 0; /* Remove padding to shrink clickable area */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.modal-content h2{
+  font-size: 2em;
+  margin-top: -10px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  width: 30%;
+}
+
+textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  width: 30%;
+  height: 10vh;
+  resize: vertical;
+  overflow: auto;
 }

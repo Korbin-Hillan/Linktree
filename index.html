@@ -1,42 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Korbin Hillan | Linktree</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.2/css/all.css">
-    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.7.2/css/all.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-</head>
-<body>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "EXgMHOjweWNwZVV2A",
+      });
+   })();
+</script>
+  </head>
+  <body>
     <!-- Particle container -->
     <div id="particles-js"></div>
-        <!-- Flexbox content wrapper -->
-        <div class="content-wrapper">
-            <header>
-                <img id="picture" src="./imgs/Senior.jpg" alt="Korbin Hillan">
-                <h2>Hi, I'm Korbin Hillan, a Junior at ASU studying Software Engineering!</h2>
-                <h3>See what I'm up to.</h3>
-            </header>
-            <div class="links" id="links">
-                <ul>
-                    <li><a href="https://korbinhillan.com/" target="_blank" rel="noopener">
-                        <i class="fa-solid fa-code">&nbsp;</i>Portfolio </a></li>
-                    <li><a href="https://www.linkedin.com/in/korbinhillan/" target="_blank" rel="noopener">
-                        <i class="fab fa-linkedin">&nbsp;</i>LinkedIn</a></li>
-                    <li><a href="https://profile.indeed.com/" target="_blank" rel="noopener">
-                        <i class="fa-solid fa-cloud">&nbsp;</i>Indeed</a></li>
-                    <li><a href="https://app.joinhandshake.com/" target="_blank" rel="noopener">
-                        <i class="fa-solid fa-handshake">&nbsp;</i>Handshake</a></li>
-                    <li><a href="https://github.com/Korbin101lee" target="_blank" rel="noopener">
-                        <i class="fab fa-github">&nbsp;</i>GitHub</a></li>
-                    <li><a href="https://drive.google.com/file/d/1mUcksOtquHINrcBYP5ka3vP4bDyvwLzn/view?usp=sharing" target="_blank" rel="noopener">
-                        <i class="far fa-file-alt">&nbsp;</i>Resume</a></li>
-                    <li><a href="#" target="_blank" rel="noopener">
-                        <i class="fa-solid fa-address-book">&nbsp;</i>Contact Me</a></li>
-                </ul>
-            </div>
-        </div>
+    <!-- Flexbox content wrapper -->
+    <div class="content-wrapper">
+      <header>
+        <img id="picture" src="./imgs/Senior.jpg" alt="Korbin Hillan" />
+        <h2>
+          Hi, I'm Korbin Hillan, a Junior at ASU studying Software Engineering!
+        </h2>
+        <h3>See what I'm up to.</h3>
+      </header>
+      <div class="links" id="links">
+        <ul>
+          <li>
+            <a href="https://korbinhillan.com/" target="_blank" rel="noopener">
+              <i class="fa-solid fa-code">&nbsp;</i>Portfolio
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/korbinhillan/"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-linkedin">&nbsp;</i>LinkedIn</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://profile.indeed.com/"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fa-solid fa-cloud">&nbsp;</i>Indeed</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://app.joinhandshake.com/"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fa-solid fa-handshake">&nbsp;</i>Handshake</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/Korbin101lee"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-github">&nbsp;</i>GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://drive.google.com/file/d/1mUcksOtquHINrcBYP5ka3vP4bDyvwLzn/view?usp=sharing"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="far fa-file-alt">&nbsp;</i>Resume</a
+            >
+          </li>
+          <li>
+            <a href="#" class="contact-button">
+              <i class="fa-solid fa-address-book">&nbsp;</i>Contact Me
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Modal for Contact Me -->
+    <div class="modal" id="contactModal">
+      <div class="modal-content">
+        <div class="close-button-container">
+        <span class="close-button">&times;</span>
+      </div>
+        <h2>Contact Me</h2>
+        <form>
+          <input type="text" id="name" name="name" placeholder="Name" required />
+
+          <input type="email" id="email" name="email" placeholder="Email" required />
+
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Message"
+            required
+          ></textarea>
+
+          <button type="submit">Send</button>
+        </form> 
+      </div>
+    </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
