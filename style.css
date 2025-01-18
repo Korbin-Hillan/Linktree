@@ -121,36 +121,6 @@ li a {
 li:hover a {
   color: #d92fd9;
 }
-/* Mobile-specific styles */
-@media (max-width: 768px) {
-  .content-wrapper {
-    top: 20px;
-  }
-
-  a {
-    font-size: 1rem; /* Reduce font size for links */
-  }
-
-  li {
-    width: 80vw; /* Smaller button width for narrow screens */
-    height: 2.5vh;
-    padding: 10px;
-  }
-
-  li a {
-    font-size: 1rem; /* Smaller text for links */
-    padding: 8px;
-  }
-
-  #picture {
-    max-width: 150px; /* Reduce image size */
-  }
-
-  #links {
-    max-width: 90%; /* Adjust container width for phones */
-  }
-}
-
 .modal {
   display: none; /* Flexbox for centering */
   justify-content: center; /* Center horizontally */
@@ -214,4 +184,45 @@ textarea {
   height: 10vh;
   resize: vertical;
   overflow: auto;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+
+  .modal-content h2 {
+    font-size: 1.5em; /* Reduce heading size */
+  }
+
+  input {
+    width: 100%; /* Adjust input width for phones */
+  }
+  textarea {
+    width: 100%; /* Adjust textarea width for phones */
+  }
+  .content-wrapper {
+    top: 20px;
+  }
+
+  a {
+    font-size: 1rem; /* Reduce font size for links */
+  }
+
+  li {
+    width: 80vw; /* Smaller button width for narrow screens */
+    height: 2.5vh;
+    padding: 10px;
+  }
+
+  li a {
+    font-size: 1rem; /* Smaller text for links */
+    padding: 8px;
+  }
+
+  #picture {
+    max-width: 150px; /* Reduce image size */
+  }
+
+  #links {
+    max-width: 90%; /* Adjust container width for phones */
+  }
 }
